@@ -39,6 +39,7 @@ class LTAutomate(unittest.TestCase):
         accessToken=os.getenv('LT_ACCESS_KEY') 
         # gridUrl: gridUrl can be found at automation dashboard
         gridUrl = os.getenv('LT_GRID_URL')
+        buildName=os.getenv('LT_BUILD_NAME')
         
         desired_cap = {
             'platform' : "win10", 
@@ -46,9 +47,9 @@ class LTAutomate(unittest.TestCase):
             'version' :  "latest-4",
             # Resolution of machine
             "name": "LambdaTest python google search test ",
-            "build": "LambdaTest python google search build",
+            "build": buildName,
             "network": True,
-            "tunnel":True,
+            #"tunnel":True,
             "video": True,
             "visual": True,
             "console": True,
