@@ -49,7 +49,7 @@ class LTAutomate(unittest.TestCase):
             "name": "LambdaTest python google search test ",
             "build": buildName,
             "network": True,
-            #"tunnel":True,
+            "tunnel":True,
             "video": True,
             "visual": True,
             "console": True,
