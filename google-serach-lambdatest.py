@@ -80,12 +80,12 @@ class LTAutomate(unittest.TestCase):
 
         val = 7 # in seconds
         driver.implicitly_wait(val)
-        driver.get("https://www.google.com/ncr")
-
+        #driver.get("https://www.google.com/ncr")
+        driver.get("http://localhost:9000")
 #       element = driver.find_element_by_link_text("Courses")
-        print("Searching lambdatest on google.com ")
+        #print("Searching lambdatest on google.com ")
 
-        print("Printing title of current page :"+driver.title)
+        #print("Printing title of current page :"+driver.title)
         driver.execute_script("lambda-status=passed")
         print("Requesting to mark test : pass")
 
