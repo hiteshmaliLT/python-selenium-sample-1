@@ -55,8 +55,8 @@ class LTAutomate(unittest.TestCase):
             "console": True,
         }
 
-        #url = "http://"+username+":"+accessToken+"@"+gridUrl
-        url = gridUrl
+        url = "http://"+username+":"+accessToken+"@"+gridUrl
+        #url = gridUrl
         
         print("Initiating remote driver on platfrom: "+desired_cap["platform"]+" browser: "+desired_cap["browserName"]+" version: "+desired_cap["version"] + ", url : "+url)
         self.driver = webdriver.Remote(
@@ -80,8 +80,8 @@ class LTAutomate(unittest.TestCase):
 
         val = 7 # in seconds
         driver.implicitly_wait(val)
-        #driver.get("https://www.google.com/ncr")
-        driver.get("http://localhost:7000")
+        driver.get("https://www.google.com/ncr")
+#         driver.get("http://localhost:7000")
 #       element = driver.find_element_by_link_text("Courses")
         #print("Searching lambdatest on google.com ")
 
