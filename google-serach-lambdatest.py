@@ -46,7 +46,7 @@ class LTAutomate(unittest.TestCase):
             'version' :  "latest-4",
             # Resolution of machine
             "name": "LambdaTest python google search test ",
-            "build": "LambdaTest python google search build",
+            "build": os.getenv('LT_BUILD_NAME'),
             "network": True,
             "tunnel":True,
             "video": True,
