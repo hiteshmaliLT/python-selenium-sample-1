@@ -49,6 +49,7 @@ class LTAutomate(unittest.TestCase):
             "build": os.getenv('LT_BUILD_NAME'),
             "network": True,
             "tunnel":True,
+            "tunnelName": os.getenv('LT_TUNNEL_NAME'),
             "video": True,
             "visual": True,
             "console": True,
