@@ -39,7 +39,6 @@ class LTAutomate(unittest.TestCase):
         accessToken=os.getenv('LT_ACCESS_KEY') 
         # gridUrl: gridUrl can be found at automation dashboard
         gridUrl = os.getenv('LT_GRID_URL')
-        buildName=os.getenv('LT_BUILD_NAME')
         
         desired_cap = {
             'platform' : "win10", 
@@ -47,7 +46,7 @@ class LTAutomate(unittest.TestCase):
             'version' :  "latest-4",
             # Resolution of machine
             "name": "LambdaTest python google search test ",
-            "build": buildName,
+            "build": os.getenv('LT_BUILD_NAME'),
             "network": True,
             "tunnel":True,
             "video": True,
@@ -81,11 +80,11 @@ class LTAutomate(unittest.TestCase):
         val = 7 # in seconds
         driver.implicitly_wait(val)
         driver.get("https://www.google.com/ncr")
-        driver.get("http://localhost:7000")
-#       element = driver.find_element_by_link_text("Courses")
-        #print("Searching lambdatest on google.com ")
 
-        #print("Printing title of current page :"+driver.title)
+#       element = driver.find_element_by_link_text("Courses")
+        print("Searching lambdatest on google.com ")
+
+        print("Printing title of current page :"+driver.title)
         driver.execute_script("lambda-status=passed")
         print("Requesting to mark test : pass")
 
